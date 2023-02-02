@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="icon" href="./img/editable-ilhom-aliyev-logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/icofonts.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Virtual Keyboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content-wrapper">
+            <button class="dark-theme"><div class="icon-svg-dark-mode"></div></button>
+            <textarea id="text-area" name="text-input" cols="30" rows="10" placeholder="Клик..."></textarea>
+            <div class="keyboard keyboard-rus keyboard_hidden">
+                <div class="line number-line">
+                    <button class="option-key" id="escape">Esc</button>
+                    <button class="key">ё</button>
+                    <button class="key">1</button>
+                    <button class="key">2</button>
+                    <button class="key">3</button>
+                    <button class="key">4</button>
+                    <button class="key">5</button>
+                    <button class="key">6</button>
+                    <button class="key">7</button>
+                    <button class="key">8</button>
+                    <button class="key">9</button>
+                    <button class="option-key" id="backspace">backspace</button>
+                </div>
+                <div class="line line-one">
+                    <button class="option-key" id="tab">tab</button>
+                    <button class="key">й</button>
+                    <button class="key">ц</button>
+                    <button class="key">у</button>
+                    <button class="key">к</button>
+                    <button class="key">е</button>
+                    <button class="key">н</button>
+                    <button class="key">г</button>
+                    <button class="key">ш</button>
+                    <button class="key">щ</button>
+                    <button class="key">з</button>
+                    <button class="key">х</button>
+                    <button class="key">ъ</button>
+                    <button class="key">\</button>
+                </div>
+                <div class="line line-two">
+                    <button class="option-key caps-lock">caps lock</button>
+                    <button class="key">ф</button>
+                    <button class="key">ы</button>
+                    <button class="key">в</button>
+                    <button class="key">а</button>
+                    <button class="key">п</button>
+                    <button class="key">р</button>
+                    <button class="key">о</button>
+                    <button class="key">л</button>
+                    <button class="key">д</button>
+                    <button class="key">ж</button>
+                    <button class="key">э</button>
+                    <button class="option-key" id="enter">enter</button>
+                </div>
+                <div class="line line-three">
+                    <button class="shift left-shift option-key">shift</button>
+                    <button class="key">я</button>
+                    <button class="key">ч</button>
+                    <button class="key">с</button>
+                    <button class="key">м</button>
+                    <button class="key">и</button>
+                    <button class="key">т</button>
+                    <button class="key">ь</button>
+                    <button class="key">б</button>
+                    <button class="key">ю</button>
+                    <button class="key">.</button>
+                    <button class="shift rigth-shift option-key">shift</button>
+                </div>
+                <div class="line line-four">
+                    <button class="option-key" id="symbols">&123</button>
+                    <button class="option-key" id="language"><div class="icon-svg-globe"></div></button>
+                    <button class="option-key" id="spacebar">пробел</button>
+                    <button class="option-key clean-button">очистить</button>
+                </div>
+            </div>
+            <div class="keyboard keyboard-eng keyboard_hidden">
+                <div class="line number-line">
+                    <button class="option-key" id="escape">Esc</button>
+                    <button class="key">~</button>
+                    <button class="key">1</button>
+                    <button class="key">2</button>
+                    <button class="key">3</button>
+                    <button class="key">4</button>
+                    <button class="key">5</button>
+                    <button class="key">6</button>
+                    <button class="key">7</button>
+                    <button class="key">8</button>
+                    <button class="key">9</button>
+                    <button class="option-key" id="backspace">backspace</button>
+                </div>
+                <div class="line line-one">
+                    <button class="option-key" id="tab">tab</button>
+                    <button class="key">q</button>
+                    <button class="key">w</button>
+                    <button class="key">e</button>
+                    <button class="key">r</button>
+                    <button class="key">t</button>
+                    <button class="key">y</button>
+                    <button class="key">u</button>
+                    <button class="key">i</button>
+                    <button class="key">o</button>
+                    <button class="key">p</button>
+                    <button class="key">[</button>
+                    <button class="key">]</button>
+                    <button class="key">\</button>
+                </div>
+                <div class="line line-two">
+                    <button class="option-key caps-lock">caps lock</button>
+                    <button class="key">a</button>
+                    <button class="key">s</button>
+                    <button class="key">d</button>
+                    <button class="key">f</button>
+                    <button class="key">g</button>
+                    <button class="key">h</button>
+                    <button class="key">j</button>
+                    <button class="key">k</button>
+                    <button class="key">l</button>
+                    <button class="key">;</button>
+                    <button class="key">'</button>
+                    <button class="option-key" id="enter">enter</button>
+                </div>
+                <div class="line line-three">
+                    <button class="shift left-shift option-key">shift</button>
+                    <button class="key">z</button>
+                    <button class="key">x</button>
+                    <button class="key">c</button>
+                    <button class="key">v</button>
+                    <button class="key">b</button>
+                    <button class="key">n</button>
+                    <button class="key">m</button>
+                    <button class="key">,</button>
+                    <button class="key">.</button>
+                    <button class="key">/</button>
+                    <button class="shift rigth-shift option-key">shift</button>
+                </div>
+                <div class="line line-four">
+                    <button class="option-key" id="symbols">&123</button>
+                    <button class="option-key" id="language"><div class="icon-svg-globe"></div></button>
+                    <button class="option-key" id="spacebar">spacebar</button>
+                    <button class="option-key clean-button">clean</button>
+                </div>
+            </div>
+            <div class="keyboard keyboard-symbols keyboard_hidden">
+                <div class="line number-line">
+                    <button class="option-key" id="escape">Esc</button>
+                    <button class="key">1</button>
+                    <button class="key">2</button>
+                    <button class="key">3</button>
+                    <button class="key">4</button>
+                    <button class="key">5</button>
+                    <button class="key">6</button>
+                    <button class="key">7</button>
+                    <button class="key">8</button>
+                    <button class="key">9</button>
+                    <button class="key">0</button>
+                    <button class="option-key" id="backspace">backspace</button>
+                </div>
+                <div class="line line-one">
+                    <button class="option-key" id="tab">tab</button>
+                    <button class="key">!</button>
+                    <button class="key">@</button>
+                    <button class="key">#</button>
+                    <button class="key">$</button>
+                    <button class="key">%</button>
+                    <button class="key">^</button>
+                    <button class="key">&</button>
+                    <button class="key">*</button>
+                    <button class="key">(</button>
+                    <button class="key">)</button>
+                    <button class="key">+</button>
+                    <button class="key">-</button>
+                    <button class="key">=</button>
+                </div>
+                <div class="line line-two">
+                    <button class="option-key caps-lock">caps lock</button>
+                    <button class="key">_</button>
+                    <button class="key">"</button>
+                    <button class="key">№</button>
+                    <button class="key">:</button>
+                    <button class="key">;</button>
+                    <button class="key">?</button>
+                    <button class="key">.</button>
+                    <button class="key">,</button>
+                    <button class="key">|</button>
+                    <button class="key">/</button>
+                    <button class="key">\</button>
+                    <button class="option-key" id="enter">enter</button>
+                </div>
+                <div class="line line-three">
+                    <button class="shift left-shift option-key">shift</button>
+                    <button class="key">€</button>
+                    <button class="key">£</button>
+                    <button class="key">¥</button>
+                    <button class="key">₽</button>
+                    <button class="key">°</button>
+                    <button class="key">×</button>
+                    <button class="key">÷</button>
+                    <button class="key"><</button>
+                    <button class="key">></button>
+                    <button class="key">'</button>
+                    <button class="shift rigth-shift option-key">shift</button>
+                </div>
+                <div class="line line-four">
+                    <button class="option-key" id="symbols">abc</button>
+                    <button class="option-key" id="language"><div class="icon-svg-globe"></div></button>
+                    <button class="option-key" id="spacebar"></button>
+                    <button class="option-key clean-button">очистить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
