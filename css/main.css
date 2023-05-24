@@ -1,0 +1,325 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+:root {
+  --text-color: black;
+  --back-color: rgba(209, 210, 215, 0.5);
+  --accent-color: teal;
+  --key-color: rgba(254, 254, 254, 0.9);
+  --opt-key-color: rgba(168, 174, 188, 0.9);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+}
+
+body {
+  font-family: "Montserrat";
+  color: var(--text-color);
+}
+
+.wrapper {
+  background: url("./../img/background-light.png") center/cover no-repeat;
+  min-height: 100vh;
+  transition: 1s;
+}
+
+.content-wrapper {
+  margin: 0 auto;
+  padding: 30px;
+  text-align: center;
+  max-width: 900px;
+  min-width: 860px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+header {
+  background-color: var(--back-color);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header a {
+  margin-left: 5px;
+  margin-bottom: -5px;
+}
+header a #logo {
+  cursor: pointer;
+  width: 70px;
+  fill: var(--text-color);
+  transition: 0.3s;
+}
+header a #logo:hover {
+  fill: var(--accent-color);
+}
+header h1 {
+  font-weight: 300;
+}
+header .dark-theme {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  padding: 10px;
+  border: 0;
+  border-radius: 15px;
+  background-color: var(--back-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+header .dark-theme:is(:hover, :focus) {
+  transform: scale(1.1);
+  outline: 3px solid var(--accent-color);
+}
+header .dark-theme .icon-svg-dark-mode {
+  font-size: 30px;
+  line-height: 0;
+  transition: 0.4s;
+}
+header .dark-theme .icon-svg-dark-mode_rotated {
+  transform: rotate(180deg);
+}
+
+.all-keyboards {
+  position: relative;
+  width: 100%;
+}
+
+.keyboard {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.1);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--back-color);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  transition: 0.2s;
+}
+.keyboard:is(:hover, :focus) {
+  outline: 3px solid var(--accent-color);
+}
+.keyboard._active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: scale(1);
+}
+
+#text-area {
+  flex: 1 1 auto;
+  width: 100%;
+  max-width: 100%;
+  font-family: "Montserrat";
+  background-color: var(--back-color);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border: 0;
+  border-radius: 20px;
+  padding: 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-size: 18px;
+  transition: 0.2s;
+}
+#text-area::-moz-placeholder {
+  font-family: "Montserrat";
+  color: var(--text-color);
+}
+#text-area::placeholder {
+  font-family: "Montserrat";
+  color: var(--text-color);
+}
+#text-area:hover, #text-area._active {
+  outline: 3px solid var(--accent-color);
+}
+
+.line {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  font-family: "Montserrat";
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+.key {
+  background-color: var(--key-color);
+  font-weight: 400;
+}
+.key:hover {
+  transform: scale(1.1);
+}
+.key:focus {
+  outline: 1px solid var(--accent-color);
+}
+.key:active, .key._active {
+  transform: scale(1);
+  transition: 0.1s;
+  background-color: var(--accent-color);
+  opacity: 0.9;
+  color: white;
+  outline: 0;
+}
+.key:not(:hover) {
+  transform: scale(1);
+  outline: 0;
+}
+
+.key,
+.option-key {
+  flex: 0 0 50px;
+  height: 50px;
+  line-height: 50px;
+  border: 0;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option-key {
+  flex: 1 1 auto;
+  font-weight: 600;
+  font-size: 14px;
+  background-color: var(--opt-key-color);
+  padding: 0 10px;
+}
+.option-key:hover {
+  transform: scale(1.07);
+}
+.option-key:focus {
+  outline: 1px solid var(--accent-color);
+}
+.option-key:active, .option-key._active {
+  transform: scale(1);
+  transition: 0.1s;
+  background-color: var(--accent-color);
+  color: white;
+  outline: 0;
+}
+.option-key:not(:hover) {
+  transform: scale(1);
+  outline: 0;
+}
+
+#escape {
+  text-align: left;
+}
+
+#tab {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+
+#backspace {
+  text-align: right;
+}
+
+#capslock {
+  text-align: left;
+}
+#capslock._active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+#enter {
+  text-align: right;
+}
+
+#shift._active {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.rigth-shift {
+  text-align: right;
+}
+
+.left-shift {
+  -moz-text-align-last: left;
+       text-align-last: left;
+}
+
+#symbols {
+  flex: 0 0 50px;
+}
+
+#space {
+  flex: 1 0 auto;
+}
+#space:hover {
+  transform: scale(1.03);
+}
+
+#language {
+  flex: 0 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+#language:active {
+  color: white;
+}
+
+.icon-svg-globe {
+  font-size: 20px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.clean-button {
+  flex: 0 0 200px;
+}
+.clean-button:hover {
+  background-color: rgb(168, 0, 0);
+  color: white;
+  outline: 0;
+}
+.clean-button:active {
+  transition: 0.1s;
+  outline: 0;
+}
+
+body._dark {
+  --text-color: white;
+  --back-color: rgba(50, 50, 50, 0.5);
+  --key-color: rgba(107, 107, 107, 0.9);
+  --opt-key-color: rgba(70, 70, 70, 0.9);
+  --accent-color: royalblue;
+}
+body._dark .wrapper {
+  background: url("./../img/background-dark.png") center/cover no-repeat;
+}/*# sourceMappingURL=main.css.map */
