@@ -4,13 +4,12 @@ const contentWrapper = document.querySelector('.content-wrapper');
 const keyboard = document.querySelectorAll('.keyboard');
 const keyboardRus = document.querySelector('.keyboard-rus');
 const keyboardEng = document.querySelector('.keyboard-eng');
-const keyboardSymbols = document.querySelectorAll('.keyboard-symbols')[0];
+const keyboardSymbols = document.querySelector('.keyboard-symbols');
 const textArea = document.querySelector('#text-area');
 const keys = document.querySelectorAll('.key');
 const optionKeys = document.querySelectorAll('.option-key');
 const shiftKeys = document.querySelectorAll('#shift');
 const capsLockKeys = document.querySelectorAll('#capslock');
-
 const darkTheme = document.querySelector('.dark-theme');
 const darkModeIcon = document.querySelector('.icon-svg-dark-mode');
 
