@@ -61,6 +61,11 @@ header a #logo {
 }
 header a #logo:hover {
   fill: var(--accent-color);
+  transform: scale(1.1);
+}
+header a #logo:active {
+  transform: scale(1);
+  transition: 0.1s;
 }
 header h1 {
   font-weight: 300;

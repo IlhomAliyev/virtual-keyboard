@@ -63,6 +63,12 @@ header {
 
       &:hover {
         fill: var(--accent-color);
+        transform: scale(1.1);
+      }
+
+      &:active {
+        transform: scale(1);
+        transition: 0.1s;
       }
     }
   }
